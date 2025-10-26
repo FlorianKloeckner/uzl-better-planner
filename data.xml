@@ -1,0 +1,1063 @@
+<?xml version="1.0"?>
+<!DOCTYPE UnivIS SYSTEM "https://univis.uni-luebeck.de/univis.dtd">
+<UnivIS version="1.7" semester="2025w">
+<Lecture key="Lecture.tnf.infsys.zentr._daten_3">
+<benschein>ja</benschein>
+<comment>Die ECTS-Punkte (insgesamt 4) gibt es nur im Zusammenhang mit der &#xDC;bung und der bestandenen Klausur.</comment>
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.infsys.infsys.groppe" /></doz>
+</dozs>
+<id>21733888</id>
+<import_parent_id>20871701</import_parent_id>
+<name>Datenbanken / CS2700-KP04 / Vorlesung</name>
+<short>DB (V)</short>
+<sws>2</sws>
+<terms>
+<term>
+<endtime>18:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 2</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.v2" /></room>
+<starttime>16:00</starttime>
+</term>
+</terms>
+<type>v-ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.infsys.zentr.datenb_2">
+<benschein>ja</benschein>
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.infsys.infsys.groppe" /></doz>
+</dozs>
+<id>21209734</id>
+<name>Datenbanken / CS2700 / &#xDC;bung (Gruppe 4 - ITSec)</name>
+<short>DB &#xDC; (Gr 4-ITSec.)</short>
+<sws>1</sws>
+<terms>
+<term>
+<endtime>18:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 4</repeat>
+<room><UnivISRef type="Room" key="Room.tnf.zentr.semina_4" /></room>
+<starttime>17:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.infsys.zentr.datenb_5">
+<benschein>ja</benschein>
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.infsys.infsys.groppe" /></doz>
+</dozs>
+<id>21665819</id>
+<name>Datenbanken / CS2700 / &#xDC;bung (Gruppe 3 - ITSec)</name>
+<short>DB &#xDC; (Gr 3-ITSec)</short>
+<sws>1</sws>
+<terms>
+<term>
+<endtime>13:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 4</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.c3s02" /></room>
+<starttime>12:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.muinsy.zentr._mensc_2">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.muinsy.muinsy.calder" /></doz>
+<doz><UnivISRef type="Person" key="Person.tnf.muinsy.muinsy.stellb" /></doz>
+</dozs>
+<id>42292509</id>
+<import_parent_id>42242729</import_parent_id>
+<name>Mensch-Computer Interaktion / CS 3010 / UE 2</name>
+<short>MCI</short>
+<sws>1</sws>
+<terms>
+<term>
+<endtime>15:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 3</repeat>
+<room><UnivISRef type="Room" key="Room.tnf.zentr.semina_6" /></room>
+<starttime>14:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.muinsy.zentr._mensc_31">
+<benschein>ja</benschein>
+<comment>nur in Verbindung mit Vorl. und Uebung</comment>
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.muinsy.muinsy.calder" /></doz>
+</dozs>
+<id>42120200</id>
+<import_parent_id>40753260</import_parent_id>
+<name>Mensch-Computer-Interaktion / CS 3010 / V</name>
+<short>MCI</short>
+<sws>3</sws>
+<terms>
+<term>
+<endtime>14:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 2</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.1" /></room>
+<starttime>12:00</starttime>
+</term>
+</terms>
+<time_description>Klausur</time_description>
+<type>vorl</type>
+</Lecture>
+<Lecture key="Lecture.tnf.muinsy.zentr._mensc_77">
+<benschein>ja</benschein>
+<comment>nur in Verbindung mit Vorl. und Uebung</comment>
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.muinsy.muinsy.calder" /></doz>
+<doz><UnivISRef type="Person" key="Person.tnf.muinsy.muinsy.stellb" /></doz>
+</dozs>
+<id>42176588</id>
+<import_parent_id>40752037</import_parent_id>
+<name>Mensch-Computer Interaktion / CS 3010 / UE 1</name>
+<short>MCI / UE</short>
+<sws>1</sws>
+<terms>
+<term>
+<endtime>14:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 3</repeat>
+<room><UnivISRef type="Room" key="Room.tnf.zentr.semina_6" /></room>
+<starttime>13:00</starttime>
+</term>
+</terms>
+<time_description>Klausur</time_description>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.sofpro.zentr._softw_0">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.sofpro.sofpro.wolter" /></doz>
+<doz><UnivISRef type="Person" key="Person.zentr.zentr.zentr.mitarb" /></doz>
+</dozs>
+<id>41956811</id>
+<import_parent_id>40751913</import_parent_id>
+<name>Software Engineering / CS2300 / &#xDC;bung (1. Gruppe)</name>
+<short>SWEng &#xDC;</short>
+<terms>
+<term>
+<endtime>9:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 1</repeat>
+<room><UnivISRef type="Room" key="Room.tnf.zentr.semina_4" /></room>
+<starttime>8:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.sofpro.zentr._softw_10">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.sofpro.sofpro.wolter" /></doz>
+<doz><UnivISRef type="Person" key="Person.zentr.zentr.zentr.mitarb" /></doz>
+</dozs>
+<id>41993044</id>
+<import_parent_id>41596848</import_parent_id>
+<name>Software Engineering / CS2300 / &#xDC;bung (7. Gruppe)</name>
+<short>SWEng &#xDC;</short>
+<terms>
+<term>
+<endtime>15:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 4</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.ams4" /></room>
+<starttime>14:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.sofpro.zentr._softw_20">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.sofpro.sofpro.wolter" /></doz>
+<doz><UnivISRef type="Person" key="Person.zentr.zentr.zentr.mitarb" /></doz>
+</dozs>
+<id>41932912</id>
+<import_parent_id>40724427</import_parent_id>
+<name>Software Engineering / CS2300 / &#xDC;bung (4. Gruppe)</name>
+<short>SWEng &#xDC;</short>
+<terms>
+<term>
+<endtime>14:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 2</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.c3s01" /></room>
+<starttime>13:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.sofpro.zentr._softw_38">
+<benschein>ja</benschein>
+<comment>Die Kreditpunkte gibt es nur zusammen mit der &#xDC;bung.</comment>
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.sofpro.sofpro.wolter" /></doz>
+<doz><UnivISRef type="Person" key="Person.zentr.zentr.zentr.mitarb" /></doz>
+</dozs>
+<id>41938592</id>
+<import_parent_id>40760597</import_parent_id>
+<name>Software Engineering / CS2300 / Vorlesung</name>
+<short>SWEng V</short>
+<terms>
+<term>
+<endtime>11:45</endtime>
+<exclude>no</exclude>
+<repeat>w1 3</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.z12" /></room>
+<starttime>10:15</starttime>
+</term>
+<term>
+<endtime>13:45</endtime>
+<exclude>vac</exclude>
+<repeat>w1 1</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.v1" /></room>
+<starttime>12:15</starttime>
+</term>
+</terms>
+<time_description>ACHTUNG: zus&#xE4;tzlich zur w&#xF6;chentlichen Mo-VL: alle 2 Wochen Mi 10.15-11.45 Uhr im Z1/2</time_description>
+<type>v-ue</type>
+<url_description_tmpl>https://moodle.uni-luebeck.de/enrol/index.php?id=10715</url_description_tmpl>
+</Lecture>
+<Lecture key="Lecture.tnf.sofpro.zentr._softw_43">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.sofpro.sofpro.wolter" /></doz>
+<doz><UnivISRef type="Person" key="Person.zentr.zentr.zentr.mitarb" /></doz>
+</dozs>
+<id>41981889</id>
+<import_parent_id>41525158</import_parent_id>
+<name>Software Engineering / CS2300 / &#xDC;bung (9. Gruppe)</name>
+<short>SWEng &#xDC;</short>
+<terms>
+<term>
+<endtime>9:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 4</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.mfc9s0_9" /></room>
+<starttime>8:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.sofpro.zentr._softw_52">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.sofpro.sofpro.wolter" /></doz>
+<doz><UnivISRef type="Person" key="Person.zentr.zentr.zentr.mitarb" /></doz>
+</dozs>
+<id>41919715</id>
+<import_parent_id>41498450</import_parent_id>
+<name>Software Engineering / CS2300 / &#xDC;bung (6. Gruppe)</name>
+<short>SWEng &#xDC;</short>
+<terms>
+<term>
+<endtime>16:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 3</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.ams4" /></room>
+<starttime>15:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.sofpro.zentr._softw_53">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.sofpro.sofpro.wolter" /></doz>
+<doz><UnivISRef type="Person" key="Person.zentr.zentr.zentr.mitarb" /></doz>
+</dozs>
+<id>41991511</id>
+<import_parent_id>41224186</import_parent_id>
+<name>Software Engineering / CS2300 / &#xDC;bung (5. Gruppe)</name>
+<short>SWEng &#xDC;</short>
+<terms>
+<term>
+<endtime>15:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 3</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.ams4" /></room>
+<starttime>14:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.sofpro.zentr._softw_63">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.sofpro.sofpro.wolter" /></doz>
+<doz><UnivISRef type="Person" key="Person.zentr.zentr.zentr.mitarb" /></doz>
+</dozs>
+<id>41948457</id>
+<import_parent_id>40730281</import_parent_id>
+<name>Software Engineering / CS2300 / &#xDC;bung (2. Gruppe)</name>
+<short>SWEng &#xDC;</short>
+<terms>
+<term>
+<endtime>10:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 1</repeat>
+<room><UnivISRef type="Room" key="Room.tnf.zentr.semina_4" /></room>
+<starttime>9:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.sofpro.zentr._softw_92">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.sofpro.sofpro.wolter" /></doz>
+<doz><UnivISRef type="Person" key="Person.zentr.zentr.zentr.mitarb" /></doz>
+</dozs>
+<id>41977709</id>
+<import_parent_id>41598246</import_parent_id>
+<name>Software Engineering / CS2300 / &#xDC;bung (8. Gruppe)</name>
+<short>SWEng &#xDC;</short>
+<terms>
+<term>
+<endtime>16:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 4</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.ams4" /></room>
+<starttime>15:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.sofpro.zentr._softw_98">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.sofpro.sofpro.wolter" /></doz>
+<doz><UnivISRef type="Person" key="Person.zentr.zentr.zentr.mitarb" /></doz>
+</dozs>
+<id>41984468</id>
+<import_parent_id>40754849</import_parent_id>
+<name>Software Engineering / CS2300 / &#xDC;bung (3. Gruppe)</name>
+<short>SWEng &#xDC;</short>
+<terms>
+<term>
+<endtime>13:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 2</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.c3s01" /></room>
+<starttime>12:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.sofpro.zentr._softw_99">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.sofpro.sofpro.wolter" /></doz>
+<doz><UnivISRef type="Person" key="Person.zentr.zentr.zentr.mitarb" /></doz>
+</dozs>
+<id>41933163</id>
+<import_parent_id>41543140</import_parent_id>
+<name>Software Engineering / CS2300 / &#xDC;bung (10. Gruppe)</name>
+<short>SWEng &#xDC;</short>
+<terms>
+<term>
+<endtime>10:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 4</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.mfc9s0_9" /></room>
+<starttime>9:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.theinf.zentr._krypt">
+<benschein>ja</benschein>
+<comment>Die Veranstaltung wird in diesem Jahr ausschlie&#xDF;lich auf Englisch angeboten.</comment>
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.theinf.theinf.liskie" /></doz>
+</dozs>
+<id>42243217</id>
+<import_parent_id>20560967</import_parent_id>
+<name>Kryptologie (Cryptology) - CS3420</name>
+<sws>2</sws>
+<terms>
+<term>
+<endtime>10:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 3</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.1" /></room>
+<starttime>8:00</starttime>
+</term>
+</terms>
+<type>vorl</type>
+<url_description_tmpl>https://moodle.uni-luebeck.de/course/view.php?id=11755</url_description_tmpl>
+</Lecture>
+<Lecture key="Lecture.tnf.theinf.zentr._krypt_3">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.theinf.theinf.breuti" /></doz>
+</dozs>
+<id>42216180</id>
+<import_parent_id>20936775</import_parent_id>
+<name>Kryptologie (Cryptology) - CS3420/ &#xDC;bung (Gruppe 2)</name>
+<sws>1</sws>
+<terms>
+<term>
+<endtime>16:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 3</repeat>
+<room><UnivISRef type="Room" key="Room.tnf.theinf.zentr.r21" /></room>
+<starttime>15:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.theinf.zentr._krypt_5">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.theinf.theinf.breuti" /></doz>
+</dozs>
+<id>42270198</id>
+<import_parent_id>41892212</import_parent_id>
+<name>Kryptologie (Cryptology) - CS3420/ &#xDC;bung (Gruppe 3)</name>
+<sws>1</sws>
+<terms>
+<term>
+<endtime>15:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 3</repeat>
+<room><UnivISRef type="Room" key="Room.tnf.theinf.zentr.r21" /></room>
+<starttime>14:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.theinf.zentr._krypt_7">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.theinf.theinf.breuti" /></doz>
+</dozs>
+<id>42263729</id>
+<import_parent_id>41376582</import_parent_id>
+<name>Kryptologie (Cryptology) - CS3420/ &#xDC;bung (Gruppe 1)</name>
+<sws>1</sws>
+<terms>
+<term>
+<endtime>16:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 4</repeat>
+<room><UnivISRef type="Room" key="Room.tnf.theinf.zentr.r21" /></room>
+<starttime>15:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.theinf.zentr._theor_0">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.theinf.theinf.chudig" /></doz>
+</dozs>
+<id>42290376</id>
+<import_parent_id>41145804</import_parent_id>
+<name>Theoretische Informatik / CS2000 / &#xDC;bung (Gruppe 3)</name>
+<terms>
+<term>
+<endtime>16:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 1</repeat>
+<room><UnivISRef type="Room" key="Room.tnf.zentr.semina_5" /></room>
+<starttime>14:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.theinf.zentr._theor_1">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.theinf.theinf.chudig" /></doz>
+</dozs>
+<id>42249758</id>
+<import_parent_id>41174018</import_parent_id>
+<name>Theoretische Informatik / CS2000 / &#xDC;bung (Gruppe 1)</name>
+<terms>
+<term>
+<endtime>12:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 1</repeat>
+<room><UnivISRef type="Room" key="Room.tnf.zentr.semina_18" /></room>
+<starttime>10:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.theinf.zentr._theor_100">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.theinf.theinf.tantau" /></doz>
+</dozs>
+<id>42254013</id>
+<import_parent_id>40760653</import_parent_id>
+<name>Theoretische Informatik / CS2000 / Vorlesung</name>
+<schein>ja</schein>
+<sws>4</sws>
+<terms>
+<term>
+<endtime>10:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 2</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.v2" /></room>
+<starttime>8:00</starttime>
+</term>
+<term>
+<enddate>2026-02-05</enddate>
+<endtime>12:00</endtime>
+<exclude>vac</exclude>
+<repeat>bd 4</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.t1" /></room>
+<startdate>2025-10-30</startdate>
+<starttime>10:00</starttime>
+</term>
+<term>
+<enddate>2025-10-23</enddate>
+<endtime>12:00</endtime>
+<exclude>vac</exclude>
+<repeat>bd 4</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.z3" /></room>
+<startdate>2025-10-16</startdate>
+<starttime>10:00</starttime>
+</term>
+</terms>
+<type>vorl</type>
+<url_description_tmpl>https://moodle.uni-luebeck.de/course/view.php?id=11758</url_description_tmpl>
+</Lecture>
+<Lecture key="Lecture.tnf.theinf.zentr._theor_16">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.theinf.theinf.chudig" /></doz>
+</dozs>
+<id>42289057</id>
+<import_parent_id>41142055</import_parent_id>
+<name>Theoretische Informatik / CS2000 / &#xDC;bung (Gruppe 4)</name>
+<terms>
+<term>
+<endtime>12:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 1</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.mfc9s0_9" /></room>
+<starttime>10:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.theinf.zentr._theor_2">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.theinf.theinf.chudig" /></doz>
+</dozs>
+<id>42229050</id>
+<import_parent_id>41157104</import_parent_id>
+<name>Theoretische Informatik / CS2000 / &#xDC;bung (Gruppe 2)</name>
+<terms>
+<term>
+<endtime>16:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 1</repeat>
+<room><UnivISRef type="Room" key="Room.tnf.theinf.zentr.r21" /></room>
+<starttime>14:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.theinf.zentr._theor_37">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.theinf.theinf.chudig" /></doz>
+</dozs>
+<id>42334977</id>
+<import_parent_id>42316437</import_parent_id>
+<name>Theoretische Informatik / CS2000/ Helpdesk</name>
+<short>Helpdesk</short>
+<terms>
+<term>
+<endtime>12:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 5</repeat>
+<room><UnivISRef type="Room" key="Room.zentr.zentr.zentr.c1s02" /></room>
+<starttime>10:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.theinf.zentr._theor_56">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.theinf.theinf.chudig" /></doz>
+</dozs>
+<id>42230808</id>
+<import_parent_id>41547259</import_parent_id>
+<name>Theoretische Informatik / CS2000 / &#xDC;bung (Gruppe 6)</name>
+<sws>2</sws>
+<terms>
+<term>
+<endtime>10:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 1</repeat>
+<room><UnivISRef type="Room" key="Room.tnf.zentr.semina_6" /></room>
+<starttime>8:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Lecture key="Lecture.tnf.theinf.zentr._theor_92">
+<dozs>
+<doz><UnivISRef type="Person" key="Person.tnf.theinf.theinf.chudig" /></doz>
+</dozs>
+<id>42256627</id>
+<import_parent_id>41317547</import_parent_id>
+<name>Theoretische Informatik / CS2000 / &#xDC;bung (Gruppe 5)</name>
+<terms>
+<term>
+<endtime>16:00</endtime>
+<exclude>vac</exclude>
+<repeat>w1 1</repeat>
+<room><UnivISRef type="Room" key="Room.tnf.zentr.semina_6" /></room>
+<starttime>14:00</starttime>
+</term>
+</terms>
+<type>ue</type>
+</Lecture>
+<Person key="Person.tnf.infsys.infsys.groppe">
+<firstname>Sven</firstname>
+<id>40634816</id>
+<lastname>Groppe</lastname>
+<locations>
+<location>
+<email>groppe@ifis.uni-luebeck.de</email>
+<fax>+49 451 3101-5704</fax>
+<ort>23562 L&#xFC;beck</ort>
+<office>65</office>
+<street>Ratzeburger Allee 160    ( Geb&#xE4;ude 64 - 2. OG )</street>
+<tel>+49 451 3101-5706</tel>
+</location>
+</locations>
+<title>Prof. Dr. rer. nat.</title>
+</Person>
+<Person key="Person.tnf.muinsy.muinsy.calder">
+<firstname>Andr&#xE9;</firstname>
+<id>42120036</id>
+<lastname>Calero Valdez</lastname>
+<locations>
+<location>
+<email>andre.calerovaldez@uni-luebeck.de</email>
+<fax>+49.451.3101.5104</fax>
+<institution>Institut f&#xFC;r Multimediale und Interaktive Systeme</institution>
+<ort>23562 L&#xFC;beck</ort>
+<office>Geb. 64, 1.006</office>
+<street>Ratzeburger Allee 160</street>
+<tel>+49.451.3101.5114</tel>
+</location>
+</locations>
+<title>Prof. Dr. phil.</title>
+</Person>
+<Person key="Person.tnf.muinsy.muinsy.stellb">
+<atitle>M.Sc.</atitle>
+<firstname>Leonard</firstname>
+<id>22225869</id>
+<lastname>Stellbrink</lastname>
+<locations>
+<location>
+<email>leonard.stellbrink@uni-luebeck.de</email>
+<fax>+49.451.3101.5104</fax>
+<institution>Institut f&#xFC;r Multimediale und Interaktive Systeme</institution>
+<ort>23562 L&#xFC;beck</ort>
+<office>1.073</office>
+<street>Ratzeburger Allee</street>
+<tel>+49.451.3101.5108</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tnf.sofpro.sofpro.wolter">
+<firstname>Diedrich</firstname>
+<id>42332196</id>
+<lastname>Wolter</lastname>
+<locations>
+<location>
+<email>diedrich.wolter@uni-luebeck.de</email>
+<institution>Institut f&#xFC;r Softwaretechnik und Programmiersprachen (ISP)</institution>
+<ort>23562 L&#xFC;beck</ort>
+<office>OG 2</office>
+<street>Maria-Goeppert-Str. 1 (MFC I)</street>
+<tel>+49 451 3101 6505</tel>
+</location>
+</locations>
+<title>Prof. Dr.</title>
+</Person>
+<Person key="Person.zentr.zentr.zentr.mitarb">
+<id>20051587</id>
+<lastname>Mitarbeiterinnen und Mitarbeiter</lastname>
+</Person>
+<Person key="Person.tnf.theinf.theinf.liskie">
+<firstname>Maciej</firstname>
+<id>49965456</id>
+<lastname>Liskiewicz</lastname>
+<locations>
+<location>
+<email>maciej.liskiewicz@uni-luebeck.de</email>
+<fax>+49 451 3101 5304</fax>
+<ort>23538 L&#xFC;beck</ort>
+<office>2014</office>
+<street>Ratzeburger Allee 160, Geb. 64</street>
+<tel>+49 451 3101 5312</tel>
+</location>
+</locations>
+<title>Prof. Dr. rer. nat.</title>
+</Person>
+<Person key="Person.tnf.theinf.theinf.breuti">
+<atitle>M.S.</atitle>
+<firstname>Dennis</firstname>
+<id>22360145</id>
+<lastname>Breutigam</lastname>
+<locations>
+<location>
+<email>d.breutigam@uni-luebeck.de</email>
+<fax>+49 451 3101 5304</fax>
+<institution>Institut f&#xFC;r Theoretische Informatik</institution>
+<ort>23563 L&#xFC;beck</ort>
+<office>17</office>
+<street>Ratzeburg Allee 160, Geb. 64</street>
+<tel>+49 451 3101 5309</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tnf.theinf.theinf.chudig">
+<atitle>M.S.</atitle>
+<firstname>Florian</firstname>
+<id>42121751</id>
+<lastname>Chudigiewitsch</lastname>
+<locations>
+<location>
+<email>florian.chudigiewitsch@uni-luebeck.de</email>
+<fax>0451-3101-5304</fax>
+<institution>Institut f&#xFC;r Theoretische Informatik</institution>
+<ort>23562 L&#xFC;beck</ort>
+<office>17</office>
+<street>Ratzeburg Allee 160, Geb. 64</street>
+<tel>0451-3101-5322</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tnf.theinf.theinf.tantau">
+<firstname>Till</firstname>
+<id>20535253</id>
+<lastname>Tantau</lastname>
+<locations>
+<location>
+<email>till.tantau@uni-luebeck.de</email>
+<fax>+49 451 3101 5304</fax>
+<office>82</office>
+<tel>+49 451 3101 5300 und -5311</tel>
+</location>
+</locations>
+<title>Prof. Dr. rer. nat.</title>
+</Person>
+<Person key="Person.tnf.instit_1.zentr.rieckh">
+<firstname>Cornelia</firstname>
+<id>49989218</id>
+<lastname>Rieckhoff</lastname>
+<locations>
+<location>
+<email>cornelia.rieckhoff@uni-luebeck.de</email>
+<fax>+49 451 3101 5204</fax>
+<ort>23562 L&#xFC;beck</ort>
+<office>98 (EG)</office>
+<street>Ratzeburger Allee 160, Geb. 64</street>
+<tel>+49 451 3101 5201</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tnf.theinf.theinf.merkel">
+<firstname>Elisa</firstname>
+<id>41931810</id>
+<lastname>Merkel-Wei&#xDF;er</lastname>
+<locations>
+<location>
+<email>Elisa.merkelweisser@uni-luebeck.de</email>
+<fax>+49 451 3101 5304</fax>
+<ort>23538 L&#xFC;beck</ort>
+<office>81</office>
+<street>Ratzeburger Allee</street>
+<tel>+49 451 3101 5301</tel>
+</location>
+</locations>
+</Person>
+<Room key="Room.zentr.zentr.zentr.v2">
+<address>Ratzeburger Allee 160, H&#xF6;rsaalgeb&#xE4;ude Vorklinik</address>
+<anst>ja</anst>
+<beam>ja</beam>
+<dark>ja</dark>
+<fest>ja</fest>
+<id>49917115</id>
+<inet>ja</inet>
+<name>H&#xF6;rsaal V 2</name>
+<pc>ja</pc>
+<short>V 2</short>
+<tafel>ja</tafel>
+<tel>+49 451 3101 9739</tel>
+<tish>ja</tish>
+<vis>ja</vis>
+</Room>
+<Room key="Room.tnf.zentr.semina_4">
+<address>Ratzeburger Allee 160 ( Geb&#xE4;ude 64 - Erdgeschoss; Innenhofseite )</address>
+<barr>ja</barr>
+<beam>ja</beam>
+<clock>ja</clock>
+<contacts>
+<contact><UnivISRef type="Person" key="Person.tnf.instit_1.zentr.rieckh" /></contact>
+</contacts>
+<dark>ja</dark>
+<id>20483515</id>
+<inet>ja</inet>
+<klim>ja</klim>
+<lose>ja</lose>
+<name>Raum 67</name>
+<pc>ja</pc>
+<proj>ja</proj>
+<short>Seminarraum Informatik 4 ( Minsky )</short>
+<speaker>ja</speaker>
+<tafel>ja</tafel>
+<tel>3101 9722</tel>
+<tish>ja</tish>
+<wlan>ja</wlan>
+</Room>
+<Room key="Room.zentr.zentr.zentr.c3s02">
+<address>Standort an der Marie-Curie-Str., gegen&#xFC;ber UKSH Mitarbeiterparkplatz</address>
+<barr>ja</barr>
+<beam>ja</beam>
+<clock>ja</clock>
+<id>41794341</id>
+<inet>ja</inet>
+<lose>ja</lose>
+<name>Seminarraum C3-S02 - 058.300</name>
+<pc>ja</pc>
+<short>C3-S02 - 058.300</short>
+<speaker>ja</speaker>
+<tafel>ja</tafel>
+<tish>ja</tish>
+<wlan>ja</wlan>
+</Room>
+<Room key="Room.tnf.zentr.semina_6">
+<address>Ratzeburger Allee 160 ( Geb&#xE4;ude 64 - Erdgeschoss; Innenhofseite )</address>
+<barr>ja</barr>
+<beam>ja</beam>
+<contacts>
+<contact><UnivISRef type="Person" key="Person.tnf.instit_1.zentr.rieckh" /></contact>
+</contacts>
+<id>21628982</id>
+<inet>ja</inet>
+<lose>ja</lose>
+<name>Raum 68 + 69</name>
+<pc>ja</pc>
+<proj>ja</proj>
+<short>Seminarraum Informatik 2/3 (Cook/Karp)</short>
+<tafel>ja</tafel>
+<tish>ja</tish>
+<wlan>ja</wlan>
+</Room>
+<Room key="Room.zentr.zentr.zentr.1">
+<address>Ratzeburger Allee 160, Turmgeb&#xE4;ude</address>
+<anst>ja</anst>
+<barr>ja</barr>
+<beam>ja</beam>
+<dark>ja</dark>
+<fest>ja</fest>
+<id>49919049</id>
+<inet>ja</inet>
+<name>H&#xF6;rsaal 1 Turmgeb&#xE4;ude</name>
+<pc>ja</pc>
+<short>H 1</short>
+<tafel>ja</tafel>
+<tel>+49 451 3101 9770</tel>
+<vis>ja</vis>
+</Room>
+<Room key="Room.zentr.zentr.zentr.ams4">
+<address>Ratzeburger Allee 160</address>
+<barr>ja</barr>
+<beam>ja</beam>
+<clock>ja</clock>
+<dark>ja</dark>
+<id>40738067</id>
+<inet>ja</inet>
+<lose>ja</lose>
+<name>Seminarraum Audimax AM S 4</name>
+<pc>ja</pc>
+<proj>ja</proj>
+<short>AM S 4</short>
+<speaker>ja</speaker>
+<tafel>ja</tafel>
+<tel>3101 9711</tel>
+<tish>ja</tish>
+<wlan>ja</wlan>
+</Room>
+<Room key="Room.zentr.zentr.zentr.c3s01">
+<address>Standort an der Marie-Curie-Str., gegen&#xFC;ber UKSH Mitarbeiterparkplatz</address>
+<barr>ja</barr>
+<beam>ja</beam>
+<clock>ja</clock>
+<id>41784341</id>
+<inet>ja</inet>
+<lose>ja</lose>
+<name>Seminarraum C3-S01 - 058.300</name>
+<pc>ja</pc>
+<short>C3-S01 - 058.300</short>
+<speaker>ja</speaker>
+<tafel>ja</tafel>
+<tish>ja</tish>
+<wlan>ja</wlan>
+</Room>
+<Room key="Room.zentr.zentr.zentr.z12">
+<address>Ratzeburger Allee 160, Zentralklinikum, Erdgeschoss</address>
+<anst>ja</anst>
+<barr>ja</barr>
+<beam>ja</beam>
+<dark>ja</dark>
+<fest>ja</fest>
+<id>20167316</id>
+<inet>ja</inet>
+<mic>ja</mic>
+<name>H&#xF6;rsaal Z 1/2</name>
+<pc>ja</pc>
+<short>Z 1/2</short>
+<speaker>ja</speaker>
+<tafel>ja</tafel>
+<tel>+49 451 500 10350 (Z1), + 49 451 500 10350 (Z2)</tel>
+<vis>ja</vis>
+<wlan>ja</wlan>
+</Room>
+<Room key="Room.zentr.zentr.zentr.v1">
+<address>Ratzeburger Allee 160, H&#xF6;rsaalgeb&#xE4;ude Vorklinik</address>
+<anst>ja</anst>
+<beam>ja</beam>
+<dark>ja</dark>
+<fest>ja</fest>
+<id>49971795</id>
+<inet>ja</inet>
+<name>H&#xF6;rsaal V 1</name>
+<pc>ja</pc>
+<short>V 1</short>
+<tafel>ja</tafel>
+<tel>+49 451 3101 9737</tel>
+<tish>ja</tish>
+<vis>ja</vis>
+</Room>
+<Room key="Room.zentr.zentr.zentr.mfc9s0_9">
+<address>Maria-Goeppert-Str. 15, Erdgeschoss</address>
+<beam>ja</beam>
+<clock>ja</clock>
+<id>41687098</id>
+<inet>ja</inet>
+<lose>ja</lose>
+<name>Seminarraum MFC9 S07</name>
+<pc>ja</pc>
+<proj>ja</proj>
+<short>MFC9 S07</short>
+<speaker>ja</speaker>
+<tafel>ja</tafel>
+<tish>ja</tish>
+<wlan>ja</wlan>
+</Room>
+<Room key="Room.tnf.theinf.zentr.r21">
+<address>Ratzeburger Allee 160  (Geb&#xE4;ude 64 - 2. OG)</address>
+<barr>ja</barr>
+<beam>ja</beam>
+<contacts>
+<contact><UnivISRef type="Person" key="Person.tnf.theinf.theinf.merkel" /></contact>
+</contacts>
+<dark>ja</dark>
+<id>20444971</id>
+<lose>ja</lose>
+<name>Seminarraum ITCS</name>
+<ohead>ja</ohead>
+<short>ITCS 2021</short>
+<tafel>ja</tafel>
+<tel>0451-5300</tel>
+</Room>
+<Room key="Room.tnf.zentr.semina_5">
+<address>Ratzeburger Allee 160 ( Geb&#xE4;ude 64 - 3. OG; Au&#xDF;enseite )</address>
+<barr>ja</barr>
+<beam>ja</beam>
+<clock>ja</clock>
+<contacts>
+<contact><UnivISRef type="Person" key="Person.tnf.instit_1.zentr.rieckh" /></contact>
+</contacts>
+<dark>ja</dark>
+<id>41012425</id>
+<inet>ja</inet>
+<lose>ja</lose>
+<name>Raum 3.015 ( L2 )</name>
+<pc>ja</pc>
+<proj>ja</proj>
+<short>Seminarraum Mathematik 1 ( Hilbert )</short>
+<speaker>ja</speaker>
+<tafel>ja</tafel>
+<tel>3101 9724</tel>
+<tish>ja</tish>
+<wlan>ja</wlan>
+</Room>
+<Room key="Room.tnf.zentr.semina_18">
+<address>Ratzeburger Allee 160 ( Geb&#xE4;ude 64 - 3. OG; Au&#xDF;enseite )</address>
+<barr>ja</barr>
+<beam>ja</beam>
+<clock>ja</clock>
+<contacts>
+<contact><UnivISRef type="Person" key="Person.tnf.instit_1.zentr.rieckh" /></contact>
+</contacts>
+<dark>ja</dark>
+<id>41029007</id>
+<inet>ja</inet>
+<lose>ja</lose>
+<name>Raum 3.014 ( L3 )</name>
+<pc>ja</pc>
+<proj>ja</proj>
+<short>Seminarraum Mathematik 2 ( Banach )</short>
+<speaker>ja</speaker>
+<tafel>ja</tafel>
+<tel>3101 9725</tel>
+<tish>ja</tish>
+</Room>
+<Room key="Room.zentr.zentr.zentr.t1">
+<address>Ratzeburger Allee 160, H&#xF6;rsaalgeb&#xE4;ude Transitorium (Haus 53)</address>
+<anst>ja</anst>
+<beam>ja</beam>
+<dark>ja</dark>
+<fest>ja</fest>
+<id>49922287</id>
+<name>H&#xF6;rsaal T 1</name>
+<pc>ja</pc>
+<short>T 1</short>
+<tafel>ja</tafel>
+<tel>3101 9746</tel>
+</Room>
+<Room key="Room.zentr.zentr.zentr.z3">
+<address>Ratzeburger Allee 160, Zentralklinikum, Erdgeschoss</address>
+<anst>ja</anst>
+<barr>ja</barr>
+<beam>ja</beam>
+<dark>ja</dark>
+<fest>ja</fest>
+<id>49906865</id>
+<inet>ja</inet>
+<mic>ja</mic>
+<name>H&#xF6;rsaal Z 3</name>
+<pc>ja</pc>
+<short>Z 3</short>
+<speaker>ja</speaker>
+<tafel>ja</tafel>
+<tel>+49 451 500 6495, 6398</tel>
+<vis>ja</vis>
+<wlan>ja</wlan>
+</Room>
+<Room key="Room.zentr.zentr.zentr.c1s02">
+<address>Standort alte Hochschulsportbaracke, an der Universit&#xE4;tsstra&#xDF;e hinter Geb.31</address>
+<barr>ja</barr>
+<beam>ja</beam>
+<clock>ja</clock>
+<id>41755341</id>
+<inet>ja</inet>
+<lose>ja</lose>
+<name>Seminarraum C1-S02 - 058.100</name>
+<pc>ja</pc>
+<short>C1-S02 - 058.100</short>
+<speaker>ja</speaker>
+<tafel>ja</tafel>
+<tish>ja</tish>
+<wlan>ja</wlan>
+</Room>
+<Title key="Title.bachel_8.3fachs">
+<title>3. Fachsemester</title>
+</Title>
+<Title key="Title.bachel_8">
+<title>IT-Sicherheit (ITSec) (B. Sc.)</title>
+</Title>
+</UnivIS>
