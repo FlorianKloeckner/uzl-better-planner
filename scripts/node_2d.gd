@@ -1,7 +1,7 @@
 extends Control
 
-const SPACE_NODE = preload("res://space_node.tscn")
-const CLASS_WIDGET = preload("res://ClassWidget.tscn")
+const SPACE_NODE = preload("res://scenes/space_node.tscn")
+const CLASS_WIDGET = preload("res://scenes/ClassWidget.tscn")
 
 var parser = XMLParser.new()
 var start_time: String
@@ -141,7 +141,7 @@ func _convert_time(time: String):
 
 func parse_xml():
 	var output: Array = []
-	parser.open("data.xml")
+	parser.open("xml-files/data.xml")
 	while parser.read() != ERR_FILE_EOF:
 		if parser.get_node_name() == "Lecture" and parser.get_node_type() == parser.NODE_ELEMENT:
 			node_name = parser.get_node_name()

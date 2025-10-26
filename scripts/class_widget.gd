@@ -2,8 +2,8 @@ extends Control
 
 signal toggled
 
-const SPACE_NODE = preload("res://space_node.tscn")
-const CLASS_WIDGET = preload("res://ClassWidget.tscn")
+const SPACE_NODE = preload("res://scenes/space_node.tscn")
+const CLASS_WIDGET = preload("res://scenes/ClassWidget.tscn")
 
 
 var active: bool = false
