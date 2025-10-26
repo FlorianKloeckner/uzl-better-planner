@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://csc21po6mmjoc"]
 
-[ext_resource type="Script" uid="uid://qrbthwwthq02" path="res://node_2d.gd" id="1_wtcfe"]
-[ext_resource type="Script" uid="uid://bo3ihus4bh350" path="res://space_node.gd" id="2_0hol4"]
+[ext_resource type="Script" uid="uid://qrbthwwthq02" path="res://scripts/node_2d.gd" id="1_4dvvg"]
+[ext_resource type="Script" uid="uid://bo3ihus4bh350" path="res://scripts/space_node.gd" id="2_rnjyy"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_wtcfe")
+script = ExtResource("1_4dvvg")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
@@ -52,7 +52,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
-script = ExtResource("2_0hol4")
+script = ExtResource("2_rnjyy")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
