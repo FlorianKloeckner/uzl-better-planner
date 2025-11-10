@@ -3,6 +3,8 @@ extends Control
 const SPACE_NODE = preload("res://scenes/space_node.tscn")
 const CLASS_WIDGET = preload("res://scenes/ClassWidget.tscn")
 
+var current_file_path: String
+
 var parser = XMLParser.new()
 var start_time: String
 var node_name: String
@@ -120,7 +122,7 @@ func sort_lectures(lectures):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var lecture_list = parse_xml()
+	var lecture_list = parse_xml(current_file_path)
 	for l in lecture_list:
 		var instance:Variant = CLASS_WIDGET.instantiate()
 		instance.set_label(l[0])
@@ -139,9 +141,9 @@ func _convert_time(time: String):
 	
 	
 
-func parse_xml():
+func parse_xml(file_path: String):
 	var output: Array = []
-	parser.open("xml-files/data.xml")
+	parser.open(file_path)
 	while parser.read() != ERR_FILE_EOF:
 		if parser.get_node_name() == "Lecture" and parser.get_node_type() == parser.NODE_ELEMENT:
 			node_name = parser.get_node_name()
@@ -158,6 +160,7 @@ func parse_xml():
 					end_time = parser.get_node_data()
 				if parser.get_node_name() == "repeat" and parser.get_node_type() == parser.NODE_ELEMENT:
 					parser.read()
+					print(parser.get_node_data())
 					day = parser.get_node_data().split(" ")[1]
 			print("The Lecture: " + node_name + " (" + start_time + " - " + end_time + ")")
 			output.append([node_name, start_time, end_time, day])
@@ -173,3 +176,11 @@ func _compare_events(a,b):
 		return false
 		
 	return a[0] < b[0]
+
+
+func _on_file_dialog_confirmed() -> void:
+	print("confirmed")
+	current_file_path = $FileDialog.current_path
+	print("current_file_path")
+	_ready()
+	
