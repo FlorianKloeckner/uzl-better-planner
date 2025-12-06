@@ -3,7 +3,7 @@ extends Control
 const SPACE_NODE = preload("res://scenes/space_node.tscn")
 const CLASS_WIDGET = preload("res://scenes/ClassWidget.tscn")
 
-var current_file_path = "xml-files/data.xml"
+var current_file_path #= "xml-files/data.xml"
 
 var parser = XMLParser.new()
 var start_time: String
@@ -11,6 +11,28 @@ var node_name: String
 var end_time: String
 
 var time_scaler:float = (650.0-40.0)/600.0 
+
+func _ready():
+	if current_file_path != "" and current_file_path != null:
+		print(current_file_path)
+		rebuild()
+# Called when the node enters the scene tree for the first time.
+func rebuild() -> void:
+	for n in $ScrollContainer/Lecture_list.get_children():
+		$ScrollContainer/Lecture_list.remove_child(n)
+		n.queue_free() 
+	
+	var lecture_list = parse_xml(current_file_path)
+	print(str(lecture_list) + "lecture_list")
+	for l in lecture_list:
+		var instance:Variant = CLASS_WIDGET.instantiate()
+		instance.set_label(l[0])
+		
+		instance.set_times(_convert_time(l[1]), _convert_time(l[2]))
+		print("contents of l[3]: " + str(l[3]))
+		instance.day = int(l[3][0]) - 1
+		$ScrollContainer/Lecture_list.add_child(instance)
+	set_board()
 
 func set_board():
 	clear_board()
@@ -117,26 +139,8 @@ func sort_lectures(lectures):
 		day.sort_custom(func(a,b): return a.start_time < b.start_time)
 		
 	return l 
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	for n in $ScrollContainer/Lecture_list.get_children():
-		$ScrollContainer/Lecture_list.remove_child(n)
-		n.queue_free() 
 	
-	print("called")
-	var lecture_list = parse_xml(current_file_path)
-	print(str(lecture_list) + "lecture_list")
-	for l in lecture_list:
-		var instance:Variant = CLASS_WIDGET.instantiate()
-		instance.set_label(l[0])
-		
-		instance.set_times(_convert_time(l[1]), _convert_time(l[2]))
-		print("contents of l[3]: " + str(l[3]))
-		instance.day = int(l[3][0]) - 1
-		$ScrollContainer/Lecture_list.add_child(instance)
-	set_board()
+	
 
 func _convert_time(time: String):
 	var result:int = int(time.split(":")[0])*60
