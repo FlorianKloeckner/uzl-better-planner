@@ -3,13 +3,12 @@ extends Control
 const SPACE_NODE = preload("res://scenes/space_node.tscn")
 const CLASS_WIDGET = preload("res://scenes/ClassWidget.tscn")
 
-var current_file_path: String
+var current_file_path = "xml-files/data.xml"
 
 var parser = XMLParser.new()
 var start_time: String
 var node_name: String
 var end_time: String
-var day: String
 
 var time_scaler:float = (650.0-40.0)/600.0 
 
@@ -122,13 +121,20 @@ func sort_lectures(lectures):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	for n in $ScrollContainer/Lecture_list.get_children():
+		$ScrollContainer/Lecture_list.remove_child(n)
+		n.queue_free() 
+	
+	print("called")
 	var lecture_list = parse_xml(current_file_path)
+	print(str(lecture_list) + "lecture_list")
 	for l in lecture_list:
 		var instance:Variant = CLASS_WIDGET.instantiate()
 		instance.set_label(l[0])
 		
 		instance.set_times(_convert_time(l[1]), _convert_time(l[2]))
-		instance.day = int(l[3]) - 1
+		print("contents of l[3]: " + str(l[3]))
+		instance.day = int(l[3][0]) - 1
 		$ScrollContainer/Lecture_list.add_child(instance)
 	set_board()
 
@@ -143,6 +149,7 @@ func _convert_time(time: String):
 
 func parse_xml(file_path: String):
 	var output: Array = []
+	var day: Array = []
 	parser.open(file_path)
 	while parser.read() != ERR_FILE_EOF:
 		if parser.get_node_name() == "Lecture" and parser.get_node_type() == parser.NODE_ELEMENT:
@@ -161,9 +168,12 @@ func parse_xml(file_path: String):
 				if parser.get_node_name() == "repeat" and parser.get_node_type() == parser.NODE_ELEMENT:
 					parser.read()
 					print(parser.get_node_data())
-					day = parser.get_node_data().split(" ")[1]
+					if parser.get_node_data().split(" ")[0] == "w1":
+						day.append(parser.get_node_data().split(" ")[1])
 			print("The Lecture: " + node_name + " (" + start_time + " - " + end_time + ")")
-			output.append([node_name, start_time, end_time, day])
+			if not day.is_empty():
+				output.append([node_name, start_time, end_time, day.duplicate()])
+				day.clear()
 	return output
 	
 
