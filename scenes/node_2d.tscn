@@ -1,20 +1,62 @@
-[gd_scene load_steps=3 format=3 uid="uid://csc21po6mmjoc"]
+[gd_scene load_steps=4 format=3 uid="uid://csc21po6mmjoc"]
 
 [ext_resource type="Script" uid="uid://qrbthwwthq02" path="res://scripts/node_2d.gd" id="1_4dvvg"]
+[ext_resource type="Script" uid="uid://dkcq6smveb60a" path="res://scenes/ui_buttons.gd" id="2_4vge2"]
 [ext_resource type="Script" uid="uid://bo3ihus4bh350" path="res://scripts/space_node.gd" id="2_rnjyy"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_4dvvg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.917647, 0.901961, 0.898039, 1)
+
+[node name="UI Buttons" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.06
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_4vge2")
+
+[node name="LoadButton" type="Button" parent="UI Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Load"
+
+[node name="SaveButton" type="Button" parent="UI Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save"
+
+[node name="ExportButton" type="Button" parent="UI Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Export"
+
+[node name="HelpButton" type="Button" parent="UI Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Help"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 8.475
-offset_bottom = 649.0
+anchor_top = 0.06
+anchor_right = 0.25
+anchor_bottom = 1.0
 
 [node name="Lecture_list" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
@@ -23,9 +65,10 @@ size_flags_horizontal = 3
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 8.475
-anchor_right = 28.775
-anchor_bottom = 16.225
+anchor_left = 0.25
+anchor_top = 0.06
+anchor_right = 1.0
+anchor_bottom = 1.0
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
@@ -35,6 +78,7 @@ size_flags_horizontal = 3
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+color = Color(0.356863, 0.572549, 0.47451, 1)
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/ColorRect"]
 layout_mode = 1
@@ -42,7 +86,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 40.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.917647, 0.901961, 0.898039, 1)
 theme_override_font_sizes/font_size = 22
 text = "MONTAG"
 horizontal_alignment = 1
@@ -61,6 +105,7 @@ size_flags_horizontal = 3
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+color = Color(0.356863, 0.572549, 0.47451, 1)
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2/ColorRect"]
 layout_mode = 1
@@ -68,7 +113,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 40.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.917647, 0.901961, 0.898039, 1)
 theme_override_font_sizes/font_size = 22
 text = "DIENSTAG"
 horizontal_alignment = 1
@@ -86,6 +131,7 @@ size_flags_horizontal = 3
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer/VBoxContainer3"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+color = Color(0.356863, 0.572549, 0.47451, 1)
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer3/ColorRect"]
 layout_mode = 1
@@ -93,7 +139,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 40.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.917647, 0.901961, 0.898039, 1)
 theme_override_font_sizes/font_size = 22
 text = "MITTWOCH"
 horizontal_alignment = 1
@@ -111,6 +157,7 @@ size_flags_horizontal = 3
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer/VBoxContainer4"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+color = Color(0.356863, 0.572549, 0.47451, 1)
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer4/ColorRect"]
 layout_mode = 1
@@ -118,7 +165,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 40.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.917647, 0.901961, 0.898039, 1)
 theme_override_font_sizes/font_size = 22
 text = "DONNERSTAG"
 horizontal_alignment = 1
@@ -136,6 +183,7 @@ size_flags_horizontal = 3
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer/VBoxContainer5"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+color = Color(0.356863, 0.572549, 0.47451, 1)
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer5/ColorRect"]
 layout_mode = 1
@@ -143,7 +191,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 40.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.917647, 0.901961, 0.898039, 1)
 theme_override_font_sizes/font_size = 22
 text = "FREITAG"
 horizontal_alignment = 1
@@ -162,4 +210,6 @@ file_mode = 0
 access = 2
 filters = PackedStringArray("*.xml")
 
+[connection signal="open_xml_dialog" from="UI Buttons" to="." method="_on_ui_buttons_open_xml_dialog"]
+[connection signal="pressed" from="UI Buttons/LoadButton" to="UI Buttons" method="_on_load_button_pressed"]
 [connection signal="confirmed" from="FileDialog" to="." method="_on_file_dialog_confirmed"]

@@ -2,6 +2,8 @@ extends Control
 
 const SPACE_NODE = preload("res://scenes/space_node.tscn")
 const CLASS_WIDGET = preload("res://scenes/ClassWidget.tscn")
+@onready var file_dialog: FileDialog = $FileDialog
+
 
 var current_file_path #= "xml-files/data.xml"
 
@@ -10,7 +12,7 @@ var start_time: String
 var node_name: String
 var end_time: String
 
-var time_scaler:float = (650.0-40.0)/600.0 
+var time_scaler:float = (650.0-39.0)/600.0 
 
 func _ready():
 	if current_file_path != "" and current_file_path != null:
@@ -196,5 +198,9 @@ func _on_file_dialog_confirmed() -> void:
 	print("confirmed")
 	current_file_path = $FileDialog.current_path
 	print("current_file_path")
-	_ready()
+	rebuild()
 	
+
+
+func _on_ui_buttons_open_xml_dialog() -> void:
+	file_dialog.show()
