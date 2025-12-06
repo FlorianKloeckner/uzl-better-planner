@@ -6,17 +6,17 @@ const CLASS_WIDGET = preload("res://scenes/ClassWidget.tscn")
 
 
 var current_file_path #= "xml-files/data.xml"
-
 var parser = XMLParser.new()
 var start_time: String
 var node_name: String
 var end_time: String
 
-var time_scaler:float = (650.0-39.0)/600.0 
+var time_scaler:float = ((650.0-40.0)/600.0 )
 
 func _ready():
+	if FileAccess.file_exists("user://backup/save.xml"):
+		current_file_path = "user://backup/save.xml"
 	if current_file_path != "" and current_file_path != null:
-		print(current_file_path)
 		rebuild()
 # Called when the node enters the scene tree for the first time.
 func rebuild() -> void:
@@ -25,13 +25,11 @@ func rebuild() -> void:
 		n.queue_free() 
 	
 	var lecture_list = parse_xml(current_file_path)
-	print(str(lecture_list) + "lecture_list")
 	for l in lecture_list:
 		var instance:Variant = CLASS_WIDGET.instantiate()
 		instance.set_label(l[0])
 		
 		instance.set_times(_convert_time(l[1]), _convert_time(l[2]))
-		print("contents of l[3]: " + str(l[3]))
 		instance.day = int(l[3][0]) - 1
 		$ScrollContainer/Lecture_list.add_child(instance)
 	set_board()
@@ -47,7 +45,6 @@ func set_board():
 		
 	
 	for i in range(lectures.size()):
-		print(i)
 		var day_list = lectures[i]
 		#var sweep_list = sweep_line(day_list)
 		var day:Variant = get_day_by_index(i)
@@ -64,7 +61,7 @@ func set_board():
 				vbox.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 				vbox.add_theme_constant_override("separation", 0)
 				add_space(vbox, lecture.start_time - latest_time)
-				add_lecture(vbox, lecture)
+				add_lecture(vbox, lecture, len(group) > 1)
 				box.add_child(vbox)
 			latest_time = max_latest_time
 			max_latest_time = 0
@@ -121,11 +118,13 @@ func add_space(day: Variant, amount: int):
 	instance.custom_minimum_size = Vector2(0, amount*time_scaler)
 	day.add_child(instance)
 
-func add_lecture(day:Variant, lecture:Variant):
+func add_lecture(day:Variant, lecture:Variant, conflict:bool):
 	var instance = CLASS_WIDGET.instantiate()
 	instance.set_times(lecture.start_time, lecture.end_time)
 	instance.set_label(lecture.lecture_name)
 	instance.calculate_height()
+	if conflict:
+		instance.set_conflict()
 	day.add_child(instance)
 
 func sort_lectures(lectures):
@@ -133,8 +132,6 @@ func sort_lectures(lectures):
 	var l = [Array(), Array(), Array(), Array(), Array()]
 	for lec in lectures:
 		var day = lec.day
-		print(lec.name)
-		print(day)
 		l.get(day).append(lec)
 		l.set(day, l.get(day))
 	for day:Array in l:
@@ -173,7 +170,6 @@ func parse_xml(file_path: String):
 					end_time = parser.get_node_data()
 				if parser.get_node_name() == "repeat" and parser.get_node_type() == parser.NODE_ELEMENT:
 					parser.read()
-					print(parser.get_node_data())
 					if parser.get_node_data().split(" ")[0] == "w1":
 						day.append(parser.get_node_data().split(" ")[1])
 			print("The Lecture: " + node_name + " (" + start_time + " - " + end_time + ")")
@@ -195,9 +191,9 @@ func _compare_events(a,b):
 
 
 func _on_file_dialog_confirmed() -> void:
-	print("confirmed")
 	current_file_path = $FileDialog.current_path
-	print("current_file_path")
+	DirAccess.make_dir_recursive_absolute("user://backup")
+	DirAccess.open("user://").copy($FileDialog.current_path, "user://backup/save.xml")
 	rebuild()
 	
 

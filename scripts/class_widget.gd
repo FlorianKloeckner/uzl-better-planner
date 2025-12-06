@@ -13,14 +13,22 @@ var end_time: int
 var length: int 
 var day: int 
 var lecture_name: String = "Placeholder"
+
+var conflict: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$ColorRect.color = Color.GRAY
+	if not conflict: 
+		$ColorRect.color = Color.GRAY
+	else:
+		$ColorRect.color = Color.PALE_VIOLET_RED
 	#this too shall
 	pass
 func _on_button_pressed() -> void:
 	toggle_active()
 	get_parent().get_parent().get_parent().set_board()
+	
+func set_conflict():
+	conflict = true
 
 func calculate_height():
 	var t:float = end_time - start_time

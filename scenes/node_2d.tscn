@@ -14,6 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_4dvvg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,24 +32,48 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_4vge2")
 
+[node name="Label" type="Label" parent="UI Buttons"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.917647, 0.901961, 0.898039, 1)
+text = "Not Saved"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="UI Buttons/Label"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.560784, 0.796078, 0.607843, 1)
+
 [node name="LoadButton" type="Button" parent="UI Buttons"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
 text = "Load"
 
 [node name="SaveButton" type="Button" parent="UI Buttons"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
 text = "Save"
 
 [node name="ExportButton" type="Button" parent="UI Buttons"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
 text = "Export"
 
 [node name="HelpButton" type="Button" parent="UI Buttons"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
 text = "Help"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
@@ -87,7 +112,7 @@ anchor_right = 1.0
 offset_bottom = 40.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.917647, 0.901961, 0.898039, 1)
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 23
 text = "MONTAG"
 horizontal_alignment = 1
 vertical_alignment = 1
