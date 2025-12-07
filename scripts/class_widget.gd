@@ -1,6 +1,6 @@
 extends Control
 
-signal toggled
+signal changed
 
 const SPACE_NODE = preload("res://scenes/space_node.tscn")
 const CLASS_WIDGET = preload("res://scenes/ClassWidget.tscn")
@@ -58,6 +58,7 @@ func set_times(s:int, e:int):
 	$Time.text = start_time_formatted + " - " + end_time_formatted
 
 func toggle_active():
+	changed.emit()
 	if active:
 		active = false
 		$ColorRect.color = Color.GRAY

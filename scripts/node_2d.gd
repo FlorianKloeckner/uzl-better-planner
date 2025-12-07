@@ -14,11 +14,44 @@ var end_time: String
 var time_scaler:float = ((650.0-40.0)/600.0 )
 
 func _ready():
+	loadSave()
+	#if current_file_path != "" and current_file_path != null:
+		#rebuild()
+
+func loadSave():
 	if FileAccess.file_exists("user://backup/save.xml"):
 		current_file_path = "user://backup/save.xml"
-	if current_file_path != "" and current_file_path != null:
 		rebuild()
-# Called when the node enters the scene tree for the first time.
+	if FileAccess.file_exists("user://savegame.save"):
+		var save_file = FileAccess.open("user://savegame.save", FileAccess.READ)
+		while save_file.get_position() < save_file.get_length():
+			var json_string = save_file.get_line()
+			var json = JSON.new()
+			var parse_result = json.parse(json_string)
+			if not parse_result == OK:
+				print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+				continue
+			var data = json.data
+			for child in $ScrollContainer/Lecture_list.get_children():
+				if child.lecture_name == data["lecture_name"] and data["is_active"]:
+					child.toggle_active()
+	set_board()
+			
+			
+	
+func save():
+	#just save the activity of the lecture list container children so we can 
+	#assign them back after loading the xml
+	var save_file = FileAccess.open("user://savegame.save", FileAccess.WRITE)
+	for child in $ScrollContainer/Lecture_list.get_children():
+		var json_string = {
+			"lecture_name" : child.lecture_name,
+			"is_active": child.active
+		}
+		json_string = JSON.stringify(json_string)
+		save_file.store_line(json_string)
+	pass
+	
 func rebuild() -> void:
 	for n in $ScrollContainer/Lecture_list.get_children():
 		$ScrollContainer/Lecture_list.remove_child(n)
@@ -32,6 +65,8 @@ func rebuild() -> void:
 		instance.set_times(_convert_time(l[1]), _convert_time(l[2]))
 		instance.day = int(l[3][0]) - 1
 		$ScrollContainer/Lecture_list.add_child(instance)
+		
+		instance.changed.connect(_on_class_widget_changed)
 	set_board()
 
 func set_board():
@@ -200,3 +235,11 @@ func _on_file_dialog_confirmed() -> void:
 
 func _on_ui_buttons_open_xml_dialog() -> void:
 	file_dialog.show()
+
+
+func _on_ui_buttons_save() -> void:
+	save()
+
+func _on_class_widget_changed():
+	$"UI Buttons".unsave()
+	

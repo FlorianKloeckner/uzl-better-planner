@@ -36,7 +36,7 @@ script = ExtResource("2_4vge2")
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.917647, 0.901961, 0.898039, 1)
-text = "Not Saved"
+text = "Unsaved Changes"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -236,5 +236,7 @@ access = 2
 filters = PackedStringArray("*.xml")
 
 [connection signal="open_xml_dialog" from="UI Buttons" to="." method="_on_ui_buttons_open_xml_dialog"]
+[connection signal="save" from="UI Buttons" to="." method="_on_ui_buttons_save"]
 [connection signal="pressed" from="UI Buttons/LoadButton" to="UI Buttons" method="_on_load_button_pressed"]
+[connection signal="pressed" from="UI Buttons/SaveButton" to="UI Buttons" method="_on_save_button_pressed"]
 [connection signal="confirmed" from="FileDialog" to="." method="_on_file_dialog_confirmed"]
