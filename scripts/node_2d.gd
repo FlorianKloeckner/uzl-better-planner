@@ -11,6 +11,8 @@ var start_time: String
 var node_name: String
 var end_time: String
 
+
+
 var time_scaler:float = ((650.0-40.0)/600.0 )
 
 func _ready():
@@ -62,11 +64,11 @@ func rebuild() -> void:
 		var instance:Variant = CLASS_WIDGET.instantiate()
 		instance.set_label(l[0])
 		
-		instance.set_times(_convert_time(l[1]), _convert_time(l[2]))
 		instance.day = int(l[3][0]) - 1
 		$ScrollContainer/Lecture_list.add_child(instance)
-		
+		instance.set_times(_convert_time(l[1]), _convert_time(l[2]))
 		instance.changed.connect(_on_class_widget_changed)
+		
 	set_board()
 
 func set_board():
@@ -78,7 +80,6 @@ func set_board():
 			lectures.append(child)
 	lectures = sort_lectures(lectures)
 		
-	
 	for i in range(lectures.size()):
 		var day_list = lectures[i]
 		#var sweep_list = sweep_line(day_list)
@@ -156,8 +157,11 @@ func add_space(day: Variant, amount: int):
 func add_lecture(day:Variant, lecture:Variant, conflict:bool):
 	var instance = CLASS_WIDGET.instantiate()
 	instance.set_times(lecture.start_time, lecture.end_time)
+	instance.linked_lecture = lecture
 	instance.set_label(lecture.lecture_name)
 	instance.calculate_height()
+	instance.set_is_widget(true)
+	instance.updated.connect(_on_class_widget_updated)
 	if conflict:
 		instance.set_conflict()
 	day.add_child(instance)
@@ -178,6 +182,7 @@ func sort_lectures(lectures):
 
 func _convert_time(time: String):
 	var result:int = int(time.split(":")[0])*60
+	print(time)
 	result += int(time.split(":")[1])
 	result -= 480
 	return result
@@ -187,30 +192,38 @@ func _convert_time(time: String):
 
 func parse_xml(file_path: String):
 	var output: Array = []
-	var day: Array = []
+	var day: String
+	var days_and_time: Array = []
 	parser.open(file_path)
 	while parser.read() != ERR_FILE_EOF:
 		if parser.get_node_name() == "Lecture" and parser.get_node_type() == parser.NODE_ELEMENT:
-			node_name = parser.get_node_name()
 			while not (parser.get_node_name() == "Lecture" and parser.get_node_type() == parser.NODE_ELEMENT_END):
+				if parser.get_node_name() == "term" and parser.get_node_type() == parser.NODE_ELEMENT:
+					while not (parser.get_node_name() == "term" and parser.get_node_type() == parser.NODE_ELEMENT_END):
+						parser.read()
+						if parser.get_node_name() == "repeat" and parser.get_node_type() == parser.NODE_ELEMENT:
+							parser.read()
+							if parser.get_node_data().split(" ")[0] == "w1":
+								day = parser.get_node_data().split(" ")[1]
+							if parser.get_node_data().split(" ")[0] == "bd":
+								day = parser.get_node_data().split(" ")[1]
+						if parser.get_node_name() == "starttime" and parser.get_node_type() == parser.NODE_ELEMENT:
+							parser.read()
+							start_time = parser.get_node_data()
+						if parser.get_node_name() == "endtime" and parser.get_node_type() == parser.NODE_ELEMENT:
+							parser.read()
+							end_time = parser.get_node_data()
+					if not [day, start_time, end_time] in days_and_time:
+						days_and_time.append([day, start_time, end_time])
 				parser.read()
 				if parser.get_node_name() == "name" and parser.get_node_type() == parser.NODE_ELEMENT:
 					parser.read()
 					node_name = parser.get_node_data()
-				if parser.get_node_name() == "starttime" and parser.get_node_type() == parser.NODE_ELEMENT:
-					parser.read()
-					start_time = parser.get_node_data()
-				if parser.get_node_name() == "endtime" and parser.get_node_type() == parser.NODE_ELEMENT:
-					parser.read()
-					end_time = parser.get_node_data()
-				if parser.get_node_name() == "repeat" and parser.get_node_type() == parser.NODE_ELEMENT:
-					parser.read()
-					if parser.get_node_data().split(" ")[0] == "w1":
-						day.append(parser.get_node_data().split(" ")[1])
+
 			print("The Lecture: " + node_name + " (" + start_time + " - " + end_time + ")")
-			if not day.is_empty():
-				output.append([node_name, start_time, end_time, day.duplicate()])
-				day.clear()
+			for day_time in days_and_time:
+				output.append([node_name, day_time[1], day_time[2], day_time[0]])
+			days_and_time.clear()
 	return output
 	
 
@@ -242,4 +255,8 @@ func _on_ui_buttons_save() -> void:
 
 func _on_class_widget_changed():
 	$"UI Buttons".unsave()
+
+func _on_class_widget_updated():
+	print("called")
+	set_board()
 	
