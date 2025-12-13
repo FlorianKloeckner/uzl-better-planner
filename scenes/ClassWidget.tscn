@@ -123,7 +123,7 @@ text = " - "
 
 [node name="HoursEnd" type="OptionButton" parent="ConfirmationDialog/HBoxContainer"]
 layout_mode = 2
-item_count = 10
+item_count = 11
 popup/item_0/text = "08"
 popup/item_0/id = 8
 popup/item_1/text = "09"
@@ -144,6 +144,8 @@ popup/item_8/text = "16"
 popup/item_8/id = 16
 popup/item_9/text = "17"
 popup/item_9/id = 17
+popup/item_10/text = "18"
+popup/item_10/id = 18
 
 [node name="Label2" type="Label" parent="ConfirmationDialog/HBoxContainer"]
 layout_mode = 2

@@ -6,7 +6,8 @@ signal updated
 const SPACE_NODE = preload("res://scenes/space_node.tscn")
 const CLASS_WIDGET = preload("res://scenes/ClassWidget.tscn")
 
-var linked_lecture
+var linked_lecture #widget linked to lecture_list
+var linked_list_lecture
 
 var active: bool = false
 
@@ -50,8 +51,10 @@ func set_up(lecture: Variant):
 func set_label(text: String):
 	lecture_name = text
 	$Label.text = text
+	
 
-func set_times(s:int, e:int):
+
+func set_times(s:int, e:int): #only to be called by the widget
 	start_time = s
 	end_time = e
 	var end_time_formatted

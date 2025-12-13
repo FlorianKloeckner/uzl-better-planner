@@ -36,6 +36,7 @@ func loadSave():
 			var data = json.data
 			for child in $ScrollContainer/Lecture_list.get_children():
 				if child.lecture_name == data["lecture_name"] and data["is_active"]:
+					child.set_times(data["lecture_start_time"], data["lecture_end_time"])
 					child.toggle_active()
 	set_board()
 			
@@ -48,7 +49,9 @@ func save():
 	for child in $ScrollContainer/Lecture_list.get_children():
 		var json_string = {
 			"lecture_name" : child.lecture_name,
-			"is_active": child.active
+			"is_active": child.active,
+			"lecture_start_time" : child.start_time,
+			"lecture_end_time" : child.end_time
 		}
 		json_string = JSON.stringify(json_string)
 		save_file.store_line(json_string)
@@ -158,6 +161,7 @@ func add_lecture(day:Variant, lecture:Variant, conflict:bool):
 	var instance = CLASS_WIDGET.instantiate()
 	instance.set_times(lecture.start_time, lecture.end_time)
 	instance.linked_lecture = lecture
+	lecture.linked_list_lecture = instance
 	instance.set_label(lecture.lecture_name)
 	instance.calculate_height()
 	instance.set_is_widget(true)

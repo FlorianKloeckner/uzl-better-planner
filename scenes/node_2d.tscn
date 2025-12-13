@@ -36,7 +36,7 @@ script = ExtResource("2_4vge2")
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.917647, 0.901961, 0.898039, 1)
-text = "Unsaved Changes"
+text = "Saved"
 horizontal_alignment = 1
 vertical_alignment = 1
 
