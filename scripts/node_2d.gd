@@ -37,6 +37,9 @@ func loadSave():
 			for child in $ScrollContainer/Lecture_list.get_children():
 				if child.lecture_name == data["lecture_name"] and data["is_active"]:
 					child.set_times(data["lecture_start_time"], data["lecture_end_time"])
+					child.set_original_times(data["original_lecture_start_time"], data["original_lecture_end_time"])
+					child.set_day(data["day"])
+					child.set_original_day(data["original_day"])
 					child.toggle_active()
 	set_board()
 			
@@ -51,7 +54,11 @@ func save():
 			"lecture_name" : child.lecture_name,
 			"is_active": child.active,
 			"lecture_start_time" : child.start_time,
-			"lecture_end_time" : child.end_time
+			"lecture_end_time" : child.end_time,
+			"original_lecture_end_time": child.original_end_time,
+			"original_lecture_start_time": child.original_start_time,
+			"day": child.day,
+			"original_day": child.original_day
 		}
 		json_string = JSON.stringify(json_string)
 		save_file.store_line(json_string)
@@ -67,9 +74,9 @@ func rebuild() -> void:
 		var instance:Variant = CLASS_WIDGET.instantiate()
 		instance.set_label(l[0])
 		
-		instance.day = int(l[3][0]) - 1
+		instance.set_original_day(int(l[3][0]) - 1)
 		$ScrollContainer/Lecture_list.add_child(instance)
-		instance.set_times(_convert_time(l[1]), _convert_time(l[2]))
+		instance.set_original_times(_convert_time(l[1]), _convert_time(l[2]))
 		instance.changed.connect(_on_class_widget_changed)
 		
 	set_board()
@@ -159,6 +166,7 @@ func add_space(day: Variant, amount: int):
 
 func add_lecture(day:Variant, lecture:Variant, conflict:bool):
 	var instance = CLASS_WIDGET.instantiate()
+	instance.set_day(lecture.day)
 	instance.set_times(lecture.start_time, lecture.end_time)
 	instance.linked_lecture = lecture
 	lecture.linked_list_lecture = instance

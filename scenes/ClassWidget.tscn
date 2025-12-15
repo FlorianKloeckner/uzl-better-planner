@@ -64,20 +64,47 @@ button_mask = 3
 flat = true
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
-title = "Change Time"
+title = "Edit Lecture"
 position = Vector2i(0, 36)
-size = Vector2i(291, 100)
+size = Vector2i(291, 142)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ConfirmationDialog"]
-anchors_preset = -1
-anchor_right = 0.92
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfirmationDialog"]
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 15.28
-offset_bottom = 51.0
+offset_right = 283.0
+offset_bottom = 93.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 alignment = 1
 
-[node name="HoursStart" type="OptionButton" parent="ConfirmationDialog/HBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="ConfirmationDialog/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ConfirmationDialog/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reset"
+
+[node name="DayOptionButton" type="OptionButton" parent="ConfirmationDialog/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+item_count = 5
+popup/item_0/text = "Monday"
+popup/item_0/id = 0
+popup/item_1/text = "Tuesday"
+popup/item_1/id = 1
+popup/item_2/text = "Wednesday"
+popup/item_2/id = 2
+popup/item_3/text = "Thursday"
+popup/item_3/id = 3
+popup/item_4/text = "Friday"
+popup/item_4/id = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ConfirmationDialog/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HoursStart" type="OptionButton" parent="ConfirmationDialog/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 item_count = 10
 popup/item_0/text = "08"
@@ -101,11 +128,11 @@ popup/item_8/id = 16
 popup/item_9/text = "17"
 popup/item_9/id = 17
 
-[node name="Label" type="Label" parent="ConfirmationDialog/HBoxContainer"]
+[node name="Label" type="Label" parent="ConfirmationDialog/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = ":"
 
-[node name="MinutesStart" type="OptionButton" parent="ConfirmationDialog/HBoxContainer"]
+[node name="MinutesStart" type="OptionButton" parent="ConfirmationDialog/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 item_count = 4
 popup/item_0/text = "00"
@@ -117,11 +144,11 @@ popup/item_2/id = 30
 popup/item_3/text = "45"
 popup/item_3/id = 45
 
-[node name="Label3" type="Label" parent="ConfirmationDialog/HBoxContainer"]
+[node name="Label3" type="Label" parent="ConfirmationDialog/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = " - "
 
-[node name="HoursEnd" type="OptionButton" parent="ConfirmationDialog/HBoxContainer"]
+[node name="HoursEnd" type="OptionButton" parent="ConfirmationDialog/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 item_count = 11
 popup/item_0/text = "08"
@@ -147,11 +174,11 @@ popup/item_9/id = 17
 popup/item_10/text = "18"
 popup/item_10/id = 18
 
-[node name="Label2" type="Label" parent="ConfirmationDialog/HBoxContainer"]
+[node name="Label2" type="Label" parent="ConfirmationDialog/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = ":"
 
-[node name="MinutesEnd" type="OptionButton" parent="ConfirmationDialog/HBoxContainer"]
+[node name="MinutesEnd" type="OptionButton" parent="ConfirmationDialog/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 item_count = 4
 popup/item_0/text = "00"

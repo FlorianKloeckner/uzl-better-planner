@@ -11,6 +11,11 @@ var linked_list_lecture
 
 var active: bool = false
 
+var original_start_time: int
+var original_end_time: int
+
+var original_day
+
 var start_time: int 
 var end_time: int 
 var length: int 
@@ -32,7 +37,15 @@ func _ready() -> void:
 	else:
 		$ColorRect.color = Color.PALE_VIOLET_RED
 	#this too shall
+	pass
 	
+func set_original_day(day: int):
+	original_day = day
+	self.day = day
+	
+func set_day(day: int):
+	self.day = day
+	$ConfirmationDialog/VBoxContainer/HBoxContainer2/DayOptionButton.select(day)
 
 func set_is_widget(b: bool):
 	is_widget = b
@@ -70,11 +83,29 @@ func set_times(s:int, e:int): #only to be called by the widget
 	$Time.text = start_time_formatted + " - " + end_time_formatted
 	set_options_buttons_time(start_time_formatted, end_time_formatted)
 
+func set_original_times(s:int, e:int):
+	original_start_time = s
+	original_end_time = e
+	start_time = s
+	end_time = e
+	var end_time_formatted
+	var start_time_formatted
+	if str(e%60).length() == 1:
+		end_time_formatted = str(e/60+8)+":"+str(e%60)+"0"
+	else:
+		end_time_formatted = str(e/60+8)+":"+str(e%60)
+	if str(s%60).length() == 1:
+		start_time_formatted = str(s/60+8)+":"+str(s%60)+"0"
+	else:
+		start_time_formatted = str(s/60+8)+":"+str(s%60)
+	$Time.text = start_time_formatted + " - " + end_time_formatted
+	set_options_buttons_time(start_time_formatted, end_time_formatted)
+
 func set_options_buttons_time(s,e):
-	hours_start = $ConfirmationDialog/HBoxContainer/HoursStart
-	minutes_start =$ConfirmationDialog/HBoxContainer/MinutesStart
-	hours_end = $ConfirmationDialog/HBoxContainer/HoursEnd
-	minutes_end = $ConfirmationDialog/HBoxContainer/MinutesEnd
+	hours_start = $ConfirmationDialog/VBoxContainer/HBoxContainer/HoursStart
+	minutes_start =$ConfirmationDialog/VBoxContainer/HBoxContainer/MinutesStart
+	hours_end = $ConfirmationDialog/VBoxContainer/HBoxContainer/HoursEnd
+	minutes_end = $ConfirmationDialog/VBoxContainer/HBoxContainer/MinutesEnd
 	
 	
 	
@@ -123,6 +154,10 @@ func _on_confirmation_dialog_confirmed() -> void:
 	var start = str(hours_start.get_item_text(hours_start.selected)) + ":" + minutes_start.get_item_text(minutes_start.selected)
 	var end = str(hours_end.get_item_text(hours_end.selected)) + ":" + minutes_end.get_item_text(minutes_start.selected)
 	start = convert_pretty_time_to_time(start)
-	end = convert_pretty_time_to_time(end)
-	linked_lecture.set_times(start, end)
+	end = convert_pretty_time_to_time(end) 
+	if is_widget:
+		linked_lecture.set_times(start, end)
+		linked_lecture.set_day($ConfirmationDialog/VBoxContainer/HBoxContainer2/DayOptionButton.selected)
+	else:
+		set_day($ConfirmationDialog/VBoxContainer/HBoxContainer2/DayOptionButton.selected)
 	updated.emit()
